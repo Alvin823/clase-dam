@@ -13,6 +13,7 @@ public class Alumno {
     public Alumno(String nombreCompleto, String numeroMatriculaAlumno, int edadAlumno) {
         if (nombreCompleto.length() < 3){
             System.out.println( "longitud demasiado corta");
+            nombre = nombreCompleto;
         }
         else{
             nombre=nombreCompleto;
@@ -20,6 +21,7 @@ public class Alumno {
         
         if ( numeroMatriculaAlumno.length()< 4) {
             System.out.println( "longitud demasiado corta");
+            numeroMatricula = numeroMatriculaAlumno;
         }
         else{ 
             numeroMatricula = numeroMatriculaAlumno;
