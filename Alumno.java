@@ -48,12 +48,29 @@ public class Alumno {
         System.out.println(nombre + " (" + numeroMatricula + ") - " + edad + " años");
     }
 
-    
     /**
      * Devuelve el nombre de usuario que el alumno debe configurar
      * en su cuenta de Github en formato de 7 caracateres
      */
     public String getNombreUsuarioGithub() {
-        return nombre.substring(0, 3) + numeroMatricula.substring(0, 4);
+        String nombreDefinitivo = "";
+        String numeroDefinitivo = "";
+        
+        if(numeroMatricula.length() < 4 ) {
+            numeroDefinitivo = numeroMatricula;
+        }
+        if (numeroMatricula.length() >= 4 ) {
+            numeroDefinitivo = numeroMatricula.substring(0,4);
+        }
+        
+
+        if ( nombre.length() < 3) {
+            nombreDefinitivo = nombre;
+        }
+        if ( nombre.length() >=3) {
+            nombreDefinitivo = nombre.substring(0,3);
+        }
+
+        return nombreDefinitivo + numeroDefinitivo;
     }
 }
